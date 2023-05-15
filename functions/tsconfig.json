@@ -1,0 +1,60 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "noImplicitThis": false,
+    "module": "esnext",
+    "target": "esnext",
+    "lib": [
+      "esnext",
+      "esnext.asynciterable",
+      "dom"
+    ],
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "allowJs": false,
+    "strict": true,
+    "noEmit": false,
+    "baseUrl": "src",
+    "paths": {
+      "@client/*": ["client/*"],
+      "@asset/*": ["client/asset/*"],
+      "@component/*": ["client/component/*"],
+      "@util/*": ["client/util/*"],
+      "@layout/*": ["client/layout/*"],
+      "@route/*": ["client/route/*"],
+      "@store/*": ["client/store/*"],
+      "@server/*": ["server/*"],
+      "@controller/*": ["server/controller/*"],
+      "@service/*": ["server/service/*"],
+      "@infra/*": ["server/infra/*"],
+      "@lib/*": ["server/lib/*"]
+    },
+    "ignoreDeprecations": "5.0"
+  },
+  "exclude": [
+    "dist",
+    "node_modules"
+  ],
+  "include": [
+    "src/client/**/*",
+    "src/server/**/*",
+    "src/server/index.ts" 
+  ],
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "files": [
+    "src/index.d.ts",
+    "src/shims-vuex.d.ts",
+    "src/shims.d.ts"
+  ],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS",
+      "preserveValueImports": true,
+      "isolatedModules": true
+    }
+  }
+}

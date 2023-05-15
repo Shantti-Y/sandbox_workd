@@ -1,0 +1,33 @@
+
+html {
+}
+
+body {
+  height: 100vh;
+  max-width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+* {
+  font-family: "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
+}
+
+
+@media all and (max-width: 767px) {
+  .p-sm-0 {
+    display: none;
+  }
+}
+
+@media all and (max-width: 991px) {
+  .p-md-0 {
+    display: none;
+  }
+}
+
+@media all and (max-width: 1199px) {
+  .p-lg-0 {
+    display: none;
+  }
+}
