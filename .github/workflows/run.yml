@@ -13,7 +13,7 @@ jobs:
     steps:
     - name: Set up Repository
       uses: actions/checkout@v2
-    - run: cd functions
+      working-directory: functions
     - run: node -v
     - name: Use Node.js
       uses: actions/setup-node@v1
