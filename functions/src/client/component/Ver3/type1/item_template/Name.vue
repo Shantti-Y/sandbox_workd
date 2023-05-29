@@ -15,8 +15,8 @@
 <script setup lang="ts">
 import { useLastName } from '@component/Ver3/composition_api/LastName';
 import { useFirstName } from '@component/Ver3/composition_api/FirstName';
-const lastNameValue = useLastName().value;
-const firstNameValue = useFirstName().value;
+const { value: lastNameValue } = useLastName();
+const { value: firstNameValue } = useFirstName();
 </script>
 <style scoped>
 

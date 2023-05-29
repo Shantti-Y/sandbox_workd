@@ -1,3 +1,5 @@
+type VueRef<T> = import("vue").WritableComputedRef<T> | import("vue").Ref<T>;
+
 type AppStatus = 'NONE' | 'SUCCESS' | 'DANGER' | 'WARNING';
 
 interface Area {

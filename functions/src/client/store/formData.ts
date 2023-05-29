@@ -25,32 +25,34 @@ const actions = {
 }
 
 const mutations = {
-  setArea(state, value: number | null){
+  setArea: (state, value: number | null) => {
     state.area = value;
   },
-  setEmail(state, value: string){
+  setEmail: (state, value: string) => {
     state.email = value;
   },
-  setFirstName(state, value: string){
+  setFirstName: (state, value: string) => {
     state.firstName = value;
   },
-  setGender(state, value: number | null){
+  setGender: (state, value: number | null) => {
     state.gender = value;
   },
-  setLastName(state, value: string){
+  setLastName: (state, value: string) => {
     state.lastName = value;
   }
 }
 
 export default {
   namespaced: true,
-  state: (): FormDataState => ({
-    area: null,
-    email: '',
-    firstName: '',
-    gender: null,
-    lastName: ''
-  }),
+  state(): FormDataState {
+    return {
+      area: null,
+      email: '',
+      firstName: '',
+      gender: null,
+      lastName: ''
+  }},
+  getters: {},
   actions,
   mutations
 }

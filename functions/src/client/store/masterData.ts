@@ -3,11 +3,6 @@ interface masterDataState {
   areas: Area[],
   genders: Gender[]
 }
-const state = (): masterDataState => ({
-  areas: areas,
-  genders: genders
-});
-
 const getters = {
   selectedArea: (state: masterDataState) => (value: number): Area | null => {
     return state.areas.find(area => area.value == value) || null;
@@ -19,6 +14,11 @@ const getters = {
 
 export default {
   namespaced: true,
-  state,
+  state(): masterDataState {
+    return {
+    areas: areas,
+    genders: genders
+   }
+  },
   getters
 }

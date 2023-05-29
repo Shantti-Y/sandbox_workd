@@ -11,7 +11,7 @@
   </form>
 </template>
 <script setup lang="ts">
-import { useStore } from '@store';
+import { useStore } from 'vuex';
 import NameForm from '@component/Ver3/type1/item_template/Name.vue';
 import EmailForm from '@component/Ver3/type1/item_template/Email.vue';
 import AreaForm from '@component/Ver3/type1/item_template/Area.vue';
