@@ -13,7 +13,6 @@ jobs:
     steps:
     - name: Set up Repository
       uses: actions/checkout@v2
-      working-directory: functions
     - run: node -v
     - name: Use Node.js
       uses: actions/setup-node@v1
@@ -21,5 +20,6 @@ jobs:
         node-version: '16.x'
     - run: node -v
     - run: yarn -v
-    - run: yarn install
-    - run: yarn test
+    - name: Exec Test
+      working-directory: ./functions
+      run: yarn install && yarn test
